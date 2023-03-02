@@ -1,0 +1,3 @@
+# Embedded-Pedometer-Android-App
+
+In this assignment, we have extended our earlier pedometer application to develop it into an embedded android application for a pedometer that connects to a Thunderboard over Bluetooth, reads the accelerometer data from the board and transmits it over to the smartphone app. The app scans for Bluetooth devices, recognizes the Thunderboard by it’s address, and enables a connect button which establishes connection between the phone and board. This project, thus, demonstrates BLE connection and how to establish that in Android. The app has a very real-world application in IoT with fitness bands and watches, that track steps on these devices and transmit them over to their smartphone apps (e.g. Fitbit).
