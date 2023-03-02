@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3647A3"
+        android:theme="@style/Theme.MyApplication.AppBarOverlay">
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        layout="@layout/content_main"
+        android:background="#9588AC" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        app:fabSize="mini"
+        app:srcCompat="@android:drawable/ic_dialog_email"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="155dp"
+        android:layout_marginTop="250dp"
+        android:text="Reset" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#C0DDFB"
+        app:layout_anchor="@+id/appBarLayout"
+        app:layout_anchorGravity="top|center"
+        app:logo="@drawable/ic_baseline_directions_walk_24"
+        app:popupTheme="@style/Theme.MyApplication.PopupOverlay"
+        app:title="   Steps"
+        app:titleMarginStart="18dp" />
+
+    <TextView
+        android:id="@+id/goals_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/goalsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="400dp"
+        android:onClick="startSecondActivity"
+        android:text="Click here to enter your goals" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="282dp"
+        android:layout_height="265dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="150dp"
+        android:background="@drawable/circle_shape"
+        android:indeterminate="false"
+        android:progressDrawable="@drawable/circle_progress_bar"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/progress_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/progress_bar"
+        android:layout_alignTop="@+id/progress_bar"
+        android:layout_alignRight="@+id/progress_bar"
+        android:layout_alignBottom="@+id/progress_bar"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="-2dp"
+        android:layout_marginBottom="-1dp"
+        android:gravity="center"
+        android:text="####"
+        android:textColor="#009688"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
